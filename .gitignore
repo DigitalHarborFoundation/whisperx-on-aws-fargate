@@ -1,3 +1,10 @@
+# Project specific
+.env
+data/tmp/
+data/models/
+data/tests/*/*.wav
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

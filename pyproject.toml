@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "transcribe-recordings"
+version = "0.1.0"
+description = "Script to transcribe recordings"
+authors = [
+    "Zachary Levonian <zach@levi.digitalharbor.org>",
+]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "transcribe", from = "src"}]
+repository = "https://github.com/DigitalHarborFoundation/whisperx-on-aws-fargate"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+python-dotenv = "^1.0.1"
+boxsdk = "^3.9.2"
+moviepy = "^1.0.3"
+pandas = "^2.2.2"
+nltk = "^3.8.1"
+setuptools = "^70.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.1"
+psutil = "^5.9.8"
+
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
