@@ -13,7 +13,6 @@ repository = "https://github.com/DigitalHarborFoundation/whisperx-on-aws-fargate
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
 python-dotenv = "^1.0.1"
-boxsdk = "^3.9.2"
 moviepy = "^1.0.3"
 pandas = "^2.2.2"
 nltk = "^3.8.1"
