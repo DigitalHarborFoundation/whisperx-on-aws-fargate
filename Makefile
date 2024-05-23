@@ -3,7 +3,7 @@
 export PATH := $(HOME)/.local/bin:$(PATH)
 
 help:
-	@echo "Relevant targets are 'help' and 'test'."
+	@echo "Relevant targets are 'install' and 'build-docker'."
 
 install:
 	@$(MAKE) ensure-poetry
