@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/github/license/DigitalHarborFoundation/whisperx-on-aws-fargate)](https://github.com/DigitalHarborFoundation/whisperx-on-aws-fargate/blob/main/LICENSE)
 
-A Dockerized transcription pipeline using WhisperX, originally intended for offline transcription and diarization of Zoom recordings.
+A Dockerized transcription pipeline using [WhisperX](https://github.com/m-bain/whisperX), originally intended for offline transcription and diarization of Zoom recordings.
 
 The Docker container is run as AWS ETL job via AWS ECS and AWS Fargate to transcribe stored recordings. As this is a public sample, it omits the following critical details:
  - Downloading or otherwise loading into memory the mp4 recordings.
@@ -17,9 +17,9 @@ It would be straightforward to fork this repository to load the data from an app
 For local development:
  - Install [Poetry](https://python-poetry.org/docs/)
  - Install [FFmpeg](https://ffmpeg.org/)
- - Install dependencies, for example using make: `make install`
+ - Install dependencies, using make: `make install`
 
-Not all of the Python dependencies are in the pyproject.toml dependency list, since it wasn't clear to the developers how to include some of the more complex deps (i.e. pytorch and whisperx).
+Not all of the Python dependencies are in the pyproject.toml dependency list, since it wasn't clear to the developers how to include some of the more complex deps (i.e. PyTorch and WhisperX).
 
 ## Execution
 
