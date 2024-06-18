@@ -71,6 +71,13 @@ To reduce task start-up time, we might consider including the models (which are 
 
 Important caveat: this basic example uses a single CPU core to transcribe audio. In our experiments, it is 2-4x slower than real-time transcription. It should be straightforward to parallelize execution for batch processing of recordings.
 
+### Pros and Cons of this approach
+
+I recommend this approach because it's easy, but there are downsides to adopting AWS Copilot. Due to a [longstanding issue](https://github.com/aws/copilot-cli/issues/1094), EC2 instances are not supported. Fargate doesn't support provisioning of GPUs, and has relatively low CPU limits ([16 vCPUs, up to 120GB memory](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-tasks-services.html#fargate-tasks-size)).
+As a result, it will be more expensive then using a more efficient approach (like a properly-sized EC2 instance). The AWS Copilot + Fargate approach will enable you to get started quickly, and is completely appropriate for transcribing relatively small amounts of recordings.
+
+## Contributors
+
 Primary code contributor:
 
  - Zachary Levonian (<zach@levi.digitalharbor.org>)
