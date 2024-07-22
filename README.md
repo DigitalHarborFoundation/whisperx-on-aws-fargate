@@ -4,7 +4,7 @@
 
 A Dockerized transcription pipeline using [WhisperX](https://github.com/m-bain/whisperX), originally intended for offline transcription and diarization of Zoom recordings.
 
-The Docker container is run as AWS ETL job via AWS ECS and AWS Fargate to transcribe stored recordings. As this is a public sample, it omits the following critical details:
+The Docker container is run as an AWS ETL job via AWS ECS and AWS Fargate to transcribe stored recordings. As this is a public sample, it omits the following critical details:
  - Downloading or otherwise loading into memory the mp4 recordings.
  - Saving the transcription metadata.
 
