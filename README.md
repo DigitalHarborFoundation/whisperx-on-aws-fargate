@@ -74,7 +74,7 @@ Important caveat: this basic example uses a single CPU core to transcribe audio.
 ### Pros and Cons of this approach
 
 I recommend this approach because it's easy, but there are downsides to adopting AWS Copilot. Due to a [longstanding issue](https://github.com/aws/copilot-cli/issues/1094), EC2 instances are not supported. Fargate doesn't support provisioning of GPUs, and has relatively low CPU limits ([16 vCPUs, up to 120GB memory](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-tasks-services.html#fargate-tasks-size)).
-As a result, it will be more expensive then using a more efficient approach (like a properly-sized EC2 instance). The AWS Copilot + Fargate approach will enable you to get started quickly, and is completely appropriate for transcribing relatively small amounts of recordings.
+As a result, it will be more expensive than using a more efficient approach (like a properly-sized EC2 instance). The AWS Copilot + Fargate approach will enable you to get started quickly, and it is completely appropriate for transcribing relatively small numbers of recordings.
 
 ## Contributors
 
